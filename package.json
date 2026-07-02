@@ -1,0 +1,7 @@
+{
+  "name": "ai-product-personal-site",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server ${PORT:-5173} --bind ${HOST:-127.0.0.1}"
+  }
+}
