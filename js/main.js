@@ -10,11 +10,14 @@ const LINKS = {
   },
   social: {
     github: "https://github.com/Allenlebron",
+    x: "https://x.com/myzwilpan",
+    zhihu: "https://www.zhihu.com/people/wei-xiang-hao-ni-cheng-de-zxiao-jie",
+    wechatOfficialAccount: "物联网小黑",
     writing: "#writing",
     xiaohongshu: "#writing",
     douyin:null, bilibili:null, youtube:null,  // SOON
   },
-  email: "",
+  email: "myzwilpan@gmail.com",
 };
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
