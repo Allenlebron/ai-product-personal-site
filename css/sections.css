@@ -501,17 +501,16 @@ a.cbar__item:hover .cbar__val--mail{color:var(--accent);border-color:var(--accen
 .cbar__arr{color:var(--ink);transition:transform .25s var(--ease),color .25s;}
 a.cbar__item:hover .cbar__arr{transform:translateX(5px);color:var(--accent);}
 
-/* 微信 QR 占位 */
+/* 微信 QR */
 .cbar__item--wechat{align-items:center;justify-content:flex-start;gap:8px;opacity:.7;}
 .qr{
   position:relative;width:96px;height:96px;margin-top:2px;
   border:1px solid var(--line);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
-  background-image:radial-gradient(var(--line) .8px,transparent .8px);background-size:7px 7px;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;
   color:var(--muted);
 }
-.qr__icon{width:26px;height:26px;}
-.qr__txt{font-size:10px;letter-spacing:.08em;}
+.qr__img{width:100%;height:100%;object-fit:contain;padding:4px;}
 .qr__cross{position:absolute;width:12px;height:12px;}
 .qr__cross::before,.qr__cross::after{content:"";position:absolute;background:var(--line);}
 .qr__cross::before{left:5px;top:-3px;width:1px;height:12px;}
