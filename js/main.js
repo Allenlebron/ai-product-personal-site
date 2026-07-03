@@ -3,8 +3,9 @@
 /* 外链数据(集中维护;U4/U5 接入)*/
 const LINKS = {
   articles: {
-    "01": "https://x.com/myzwilpan/article/2046791669778174339",
-    "02": "https://x.com/myzwilpan/article/2027635813597778149",
+    "01": "https://x.com/myzwilpan/status/2048965951035744410",
+    "02": "https://x.com/myzwilpan/article/2046791669778174339",
+    "03": "https://x.com/myzwilpan/article/2027635813597778149",
   },
   social: {
     github: "https://github.com/Allenlebron",
