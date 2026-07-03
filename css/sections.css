@@ -299,9 +299,8 @@
 .srow__logo--x{background:transparent;color:var(--ink);}
 .srow__logo--x svg{width:42px;height:42px;}
 .srow__logo--x svg path{fill:currentColor;}
-.srow__logo--tg{background:#29A9EB;border-radius:50%;}
-.srow__logo--xhs{background:#FF2442;}
-.srow__logo--xhs svg{width:32px;height:32px;}
+.srow__logo--zhihu{background:#1772F6;color:#fff;}
+.srow__zhihu-mark{font:800 23px/1 var(--serif-cjk);}
 .srow__logo--tt{background:#111;}
 .srow__logo--bili{background:#00A1D6;}
 .srow__logo--bili svg{width:31px;height:31px;}
