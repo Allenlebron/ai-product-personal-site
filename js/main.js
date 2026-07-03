@@ -5,6 +5,9 @@ const LINKS = {
   articles: {
     "01": "https://x.com/myzwilpan/status/2048965951035744410",
     "02": "https://x.com/myzwilpan/article/2027635813597778149",
+    "03": "https://x.com/myzwilpan/status/2052637342171811906",
+    "04": "https://x.com/myzwilpan/status/2043521291211456911",
+    "05": "https://x.com/myzwilpan/status/2053024089137398164",
   },
   social: {
     github: "https://github.com/Allenlebron",
