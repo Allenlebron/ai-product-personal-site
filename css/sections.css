@@ -72,6 +72,11 @@
   transform-origin:50% 46%;
   transition:opacity .35s var(--ease),filter .35s var(--ease);
 }
+.portrait--photo .portrait__img{
+  height:100%;
+  object-fit:cover;
+  object-position:62% 39%;
+}
 /* 默认是细 plus,用于 about 人物和局部装饰 */
 .portrait__cross{position:absolute;z-index:5;display:block;width:74px;height:74px;pointer-events:none;}
 .portrait__cross::before,.portrait__cross::after{content:"";position:absolute;background:var(--line);opacity:.9;}
