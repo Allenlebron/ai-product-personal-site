@@ -3,10 +3,10 @@
 /* 外链数据(集中维护;U4/U5 接入)*/
 const LINKS = {
   articles: {
-    "01": "#build",
-    "02": "#build",
-    "03": "#build",
-    "04": "#build",
+    "01": "https://x.com/search?q=from%3Amyzwilpan%20AI%20%E7%BC%96%E7%A8%8B%20%E5%AE%9E%E6%88%98%20%E7%9C%9F%E5%AE%9E%E9%A1%B9%E7%9B%AE&src=typed_query&f=live",
+    "02": "https://x.com/search?q=from%3Amyzwilpan%20Codex%20%E5%B7%A5%E4%BD%9C%E6%B5%81%20%E4%BB%8E%E6%83%B3%E6%B3%95%E5%88%B0%E4%BB%A3%E7%A0%81&src=typed_query&f=live",
+    "03": "https://x.com/search?q=from%3Amyzwilpan%20Claude%20Code%20Cursor%20%E7%9C%9F%E5%AE%9E%E9%A1%B9%E7%9B%AE%E8%B8%A9%E5%9D%91&src=typed_query&f=live",
+    "04": "https://x.com/search?q=from%3Amyzwilpan%20%E5%8F%AF%E5%A4%8D%E5%88%B6%E6%A1%88%E4%BE%8B%20%E4%BA%A7%E5%93%81%E5%A4%8D%E7%9B%98&src=typed_query&f=live",
   },
   social: {
     github: "https://github.com/Allenlebron",
