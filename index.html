@@ -5,14 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ZW - AI product builder</title>
 <meta name="description" content="ZW - 技术人用 AI 做产品的实战记录。记录个人网站、小工具、小程序从想法到上线的过程。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ZW - AI product builder" />
+<meta property="og:description" content="用 AI 做网站、小工具、小程序，记录从想法到上线的全过程。" />
+<meta property="og:image" content="https://ai-product-personal-site.pages.dev/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ZW - AI product builder" />
+<meta name="twitter:description" content="用 AI 做网站、小工具、小程序，记录从想法到上线的全过程。" />
+<meta name="twitter:image" content="https://ai-product-personal-site.pages.dev/assets/og.png" />
 <link rel="icon" href="data:," />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+SC:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/tokens.css?v=20260629" />
-<link rel="stylesheet" href="css/base.css?v=20260629-mobile1" />
-<link rel="stylesheet" href="css/sections.css?v=20260703-home-photo-particles" />
-<link rel="stylesheet" href="css/work-split.css?v=20260629-mobile1" />
+<link rel="stylesheet" href="css/tokens.css?v=20260710-ui-pass" />
+<link rel="stylesheet" href="css/base.css?v=20260710-ui-pass" />
+<link rel="stylesheet" href="css/sections.css?v=20260710-ui-pass" />
+<link rel="stylesheet" href="css/work-split.css?v=20260710-ui-pass" />
 </head>
 <body>
 
@@ -52,10 +62,9 @@
   <nav class="nav__links" aria-label="主导航">
     <a href="#about">ABOUT</a><span class="sep">·</span>
     <a href="#writing">WRITING</a><span class="sep">·</span>
-    <a href="#shoot">VIDEO</a><span class="sep">·</span>
     <a href="#build">BUILD</a><span class="sep">·</span>
     <a href="#contact">CONTACT</a>
-    <span class="nav__stat">BUILDING <i></i></span>
+    <span class="nav__stat">SHIPPING <i></i></span>
     <a class="nav__github" href="https://github.com/Allenlebron/ai-product-personal-site" target="_blank" rel="noopener" aria-label="GitHub source code">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
     </a>
@@ -77,12 +86,13 @@
       <div class="hero__lower">
         <p class="hero__kicker" data-reveal><span class="dot"></span> AI product × build in public</p>
         <p class="hero__slogan" data-reveal>
-          用 AI 做网站、小工具、小程序<br />
+          用 AI 做网站、小工具、<span class="nowrap">小程序</span><br />
           记录从想法到上线的全过程
         </p>
+        <p class="hero__proof" data-reveal>独立完成需求、设计、开发与上线</p>
         <div class="hero__cta" data-reveal>
-          <a href="#writing" class="btn btn--ghost">查看内容 <span class="arr">→</span></a>
-          <a href="#contact" class="btn btn--link">联系我 <span class="arr">→</span></a>
+          <a href="#build" class="btn btn--ghost">查看产品 <span class="arr">→</span></a>
+          <a href="#writing" class="btn btn--link">阅读文章 <span class="arr">→</span></a>
         </div>
       </div>
     </div>
@@ -103,9 +113,9 @@
     <div class="about__left">
       <h2 class="about__title" data-reveal>About me</h2>
       <div class="about__bio" data-reveal>
-        <p>我是 ZW,一个用 AI 做产品的技术实践者</p>
-        <p>把个人网站、工具站、小程序当成真实样本</p>
-        <p>记录从需求、开发、上线到变现的全过程</p>
+        <p>从需求梳理、设计到开发上线，一人完成产品闭环</p>
+        <p>已经做过个人网站、图片工具与亲子识字 H5</p>
+        <p>持续公开真实的开发过程、结果与复盘</p>
       </div>
 
       <!-- 工程蓝图档案:线稿头像 + 标注 -->
@@ -204,7 +214,7 @@
       <div class="signal" data-reveal>
         <div class="signal__head">
           <h3 class="signal__title">全平台信号台</h3>
-          <span class="signal__legend"><b>LIVE</b> / SOON</span>
+          <span class="signal__legend"><b>LIVE</b> / 2 CHANNELS</span>
         </div>
 
         <ul class="signal__list">
@@ -232,37 +242,6 @@
             </a>
           </li>
 
-          <li class="srow srow--soon">
-            <span class="srow__logo srow__logo--tt">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.2 3c.3 2.3 1.6 3.9 3.8 4.1v2.6c-1.3 0-2.6-.4-3.8-1.1v5.7c0 3.2-2.7 5.6-5.8 5.2-2.5-.3-4.4-2.4-4.2-5 .2-2.5 2.3-4.4 4.8-4.1v2.7c-.4-.1-.9-.1-1.3 0-1 .3-1.5 1.2-1.3 2.1.2.9 1 1.4 2 1.3.9-.1 1.4-.9 1.4-1.8V3h2.4Z"/></svg>
-            </span>
-            <span class="srow__handle">短视频</span>
-            <span class="srow__count">-</span>
-            <span class="srow__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="srow__status srow__status--soon">SOON</span>
-          </li>
-
-          <li class="srow srow--soon">
-            <span class="srow__logo srow__logo--bili">
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path fill="#fff" d="M35.63 9.31h1.71c3.02.11 5.54 1.16 7.55 3.15 2.01 1.99 3.05 4.5 3.12 7.52v14.72c-.07 3.02-1.11 5.54-3.12 7.55-2.01 2.01-4.52 3.05-7.55 3.12H10.67c-3.02-.07-5.54-1.11-7.55-3.12C1.11 40.24.07 37.73 0 34.69V19.97c.07-3.02 1.11-5.53 3.12-7.52 2.01-1.99 4.52-3.04 7.55-3.15h1.55L9.87 7.07a2.47 2.47 0 0 1-.75-1.81c0-.71.25-1.32.75-1.81l.05-.05c.53-.5 1.15-.75 1.84-.75.69 0 1.31.25 1.84.75l5.71 5.49c.14.14.27.28.37.43h8.53c.11-.14.21-.28.32-.43l5.71-5.49c.53-.5 1.15-.75 1.84-.75.69 0 1.32.3 1.86.8.53.5.78 1.1.78 1.81 0 .71-.25 1.31-.75 1.81l-2.35 2.24ZM10.67 14.48c-1.49.04-2.75.55-3.76 1.55-1.01 1-1.54 2.26-1.57 3.79v15.04c.03 1.53.56 2.79 1.57 3.79 1.01 1 2.27 1.51 3.76 1.55h26.67c1.49-.04 2.75-.55 3.76-1.55 1.01-1 1.54-2.26 1.57-3.79V19.81c-.03-1.53-.56-2.79-1.57-3.79-1.01-1-2.27-1.51-3.76-1.55H10.67Zm5.33 7.73c.75 0 1.37.25 1.87.75.5.5.77 1.14.8 1.92v2.35c-.03.78-.3 1.42-.8 1.92-.5.5-1.12.75-1.87.75s-1.37-.25-1.87-.75c-.5-.5-.77-1.14-.8-1.92v-2.35c0-.75.26-1.38.77-1.89.52-.52 1.15-.77 1.89-.77Zm16 0c.75 0 1.37.25 1.87.75.5.5.77 1.14.8 1.92v2.35c-.03.78-.3 1.42-.8 1.92-.5.5-1.12.75-1.87.75s-1.37-.25-1.87-.75c-.5-.5-.77-1.14-.8-1.92v-2.35c.03-.78.3-1.42.8-1.92.5-.5 1.12-.75 1.87-.75Z"/>
-              </svg>
-            </span>
-            <span class="srow__handle">Bilibili</span>
-            <span class="srow__count">-</span>
-            <span class="srow__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="srow__status srow__status--soon">SOON</span>
-          </li>
-
-          <li class="srow srow--soon">
-            <span class="srow__logo srow__logo--yt">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 8.5 15.5 12 10 15.5Z" fill="#fff"/></svg>
-            </span>
-            <span class="srow__handle">YouTube</span>
-            <span class="srow__count">-</span>
-            <span class="srow__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="srow__status srow__status--soon">SOON</span>
-          </li>
         </ul>
       </div>
     </div>
@@ -274,13 +253,7 @@
       <h2 class="writing__title" data-reveal>Writing</h2>
       <div class="writing__cats" data-reveal>
         <span class="writing__cat-title">写 - WRITE</span>
-        <span class="writing__cat-row">
-          <span class="writing__cat-current">写</span>
-          <i class="dotsep"></i>
-          <span class="cat cat--soon"><b class="cat__zh">拍</b><i class="cat__soon">SOON</i></span>
-          <i class="dotsep"></i>
-          <span class="cat cat--soon"><b class="cat__zh">创</b><i class="cat__soon">SOON</i></span>
-        </span>
+        <span class="writing__scope">案例 · 教程 · 工作流</span>
       </div>
     </header>
 
@@ -294,8 +267,8 @@
         </span>
         <div class="feat__body">
           <span class="feat__idx">01</span>
-          <h3 class="feat__title">GPT Image 2 提示词速查手册：<br />9 个要素搞定一切出图需求</h3>
-          <p class="feat__dek">把出图提示词拆成可复用的 9 个要素，<br />快速覆盖封面、海报、配图等常见需求。</p>
+          <h3 class="feat__title">GPT Image 2 提示词速查手册：9 个要素搞定一切出图需求</h3>
+          <p class="feat__dek">把出图提示词拆成可复用的 9 个要素，快速覆盖封面、海报、配图等常见需求。</p>
           <div class="feat__meta"><span class="feat__tag">GPT Image 2</span><span class="dotsep"></span><span>提示词</span><span class="feat__views"><svg class="viewico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>STATUS</span></div>
           <span class="feat__read">阅读文章 <span class="arr">→</span></span>
         </div>
@@ -341,96 +314,68 @@
     <a class="writing__all" href="https://x.com/myzwilpan" target="_blank" rel="noopener" data-reveal>更多文章 <span class="arr">→</span></a>
   </section>
 
-  <!-- ═══════════ SHOOT / VIDEO（深色）═══════════ -->
+  <!-- ═══════════ NEXT FORMAT / VIDEO ═══════════ -->
   <section class="shoot" id="shoot">
-    <div class="shoot__stage" data-reveal>
+    <div class="shoot__compact" data-reveal>
       <span class="shoot__bg" style="background-image:url('assets/shoot-bg.png')"></span>
-      <div class="shoot__topbar">
-        <span class="shoot__rec"><i></i> REC · 00:00:00</span>
-        <span class="shoot__ep">EP.01 · 筹备中</span>
+      <div class="shoot__compact-copy">
+        <span class="shoot__kicker">NEXT FORMAT / VIDEO</span>
+        <h2 class="shoot__compact-title">把 AI 产品过程讲清楚</h2>
+        <p class="shoot__compact-note">短视频内容制作中，上线后会从真实产品拆解开始。</p>
       </div>
-      <div class="shoot__copy">
-        <h3 class="shoot__center">把 AI 产品过程讲清楚</h3>
-        <p class="shoot__soon">视频内容筹备中</p>
-      </div>
-      <div class="shoot__player">
-        <span class="shoot__play">▶</span>
-        <span class="shoot__t">00:00</span>
-        <span class="shoot__track"><i></i></span>
-        <span class="shoot__pct">0%</span>
-      </div>
-    </div>
-    <div class="shoot__foot">
-      <div class="shoot__wordwrap">
-        <span class="shoot__kicker" data-reveal>拍 - SHOOT</span>
-        <h2 class="shoot__title" data-reveal>Shoot</h2>
-      </div>
+      <span class="shoot__status"><i></i> IN PRODUCTION · 01</span>
     </div>
   </section>
 
   <!-- ═══════════ BUILD ═══════════ -->
   <section class="build" id="build">
-    <div class="build__git" aria-hidden="true">
-      <span class="git__branch">⊖&nbsp;&nbsp; main --</span>
-      <span class="git__line"></span>
-      <span class="git__row"><i></i><b>a1b2c3d</b><em>feat: init core</em></span>
-      <span class="git__row"><i></i><b>d4e5f6a</b><em>feat: graph engine</em></span>
-      <span class="git__row"><i></i><b>f7a8b9c</b><em>feat: content model</em></span>
-      <span class="git__row git__row--head"><i></i><b>HEAD --</b><em>build: in public</em></span>
-      <span class="git__row git__row--ghost"><i></i></span>
-      <span class="git__row git__row--ghost"><i></i></span>
-    </div>
-
-    <div class="build__left" data-reveal>
-      <span class="build__kicker">创 - BUILD</span>
-      <h2 class="build__title">Build</h2>
-      <p class="build__sub"><span class="dot"></span>公开建造中 · 持续迭代</p>
-      <a class="build__cta" href="https://github.com/Allenlebron" target="_blank" rel="noopener"><span class="build__cta-text">关注我的&nbsp;GitHub</span><svg class="github-mark" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg><span class="arr">→</span></a>
-    </div>
-
-    <div class="build__terminal" data-build data-reveal>
-      <div class="term__bar">
-        <i></i><i></i><i></i>
+    <header class="build__head" data-reveal>
+      <div>
+        <span class="build__kicker">创 - BUILD</span>
+        <h2 class="build__title">Build</h2>
       </div>
-      <div class="term__body">
-        <pre class="term__code" data-typed aria-hidden="true">$ zw build --ai-product
-10:12:01  checking workspace
-10:12:02  loading modules
-10:12:03  resolving dependencies
-10:12:05  generating bundles
-10:12:07  optimizing assets
-10:12:08  writing artifacts
-10:12:09  linking ideas
-</pre>
-        <div class="term__compile">
-          <span class="term__ver">v0.1.0 · <span data-compile-label>compiling...</span></span>
-          <div class="term__bar2"><i data-progress-bar style="width:0%"></i></div>
-          <span class="term__pct" data-progress-num>0%</span>
+      <div class="build__intro">
+        <p>不只记录想法，也把它们做成可以打开、使用和验证的产品。</p>
+        <span><i></i> 3 个真实项目 · 持续迭代</span>
+      </div>
+    </header>
+
+    <div class="build__projects">
+      <a class="project-card" href="https://github.com/Allenlebron/ai-product-personal-site" target="_blank" rel="noopener" data-reveal>
+        <div class="project-card__top"><span>01</span><span class="project-card__status"><i></i> LIVE</span></div>
+        <div class="project-card__visual" aria-hidden="true"><strong>ZW</strong><small>PRODUCT / WEB</small></div>
+        <div class="project-card__body">
+          <p class="project-card__meta">STATIC WEB · CLOUDFLARE</p>
+          <h3>AI 产品个人站</h3>
+          <p>从内容结构、视觉、交互到部署，持续迭代的 build in public 样本。</p>
+          <span class="project-card__link">查看源码 <b>→</b></span>
         </div>
-      </div>
+      </a>
+
+      <a class="project-card" href="https://children-shizi.pages.dev/" target="_blank" rel="noopener" data-reveal>
+        <div class="project-card__top"><span>02</span><span class="project-card__status"><i></i> LIVE</span></div>
+        <div class="project-card__visual project-card__visual--hanzi" aria-hidden="true"><strong>字</strong><small>FAMILY / H5</small></div>
+        <div class="project-card__body">
+          <p class="project-card__meta">H5 · FAMILY PRODUCT</p>
+          <h3>小孩识字</h3>
+          <p>面向 3–6 岁孩子与家长的故事识字体验，围绕故事字卡、带读提示和轻记录。</p>
+          <span class="project-card__link">查看产品 <b>→</b></span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/Allenlebron/LifeManga" target="_blank" rel="noopener" data-reveal>
+        <div class="project-card__top"><span>03</span><span class="project-card__status project-card__status--open"><i></i> OPEN SOURCE</span></div>
+        <div class="project-card__visual project-card__visual--manga" aria-hidden="true"><strong>漫</strong><small>IOS / GPT IMAGE</small></div>
+        <div class="project-card__body">
+          <p class="project-card__meta">IOS · GPT IMAGE</p>
+          <h3>LifeManga</h3>
+          <p>把生活照片转成日式漫画的 iOS App，包含角色库、故事模式与后台任务。</p>
+          <span class="project-card__link">查看项目 <b>→</b></span>
+        </div>
+      </a>
     </div>
 
-    <span class="build__plus" aria-hidden="true">+</span>
-
-    <div class="build__measure build__measure--area" aria-hidden="true">
-      <span></span><b>build area</b><em>960 × 540</em>
-    </div>
-    <div class="build__measure build__measure--progress" aria-hidden="true">
-      <span></span><b>progress</b><em data-progress-measure>0%</em>
-    </div>
-    <div class="build__queue" aria-hidden="true">
-      <span class="queue__label">queued</span>
-      <span class="queue__brace">{</span>
-      <ul>
-        <li>personal site</li>
-        <li>image tool</li>
-        <li>mini app</li>
-      </ul>
-    </div>
-    <div class="build__ruler" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i>
-      <span>0</span><span>240</span><span>480</span><span>720</span><span>960</span>
-    </div>
+    <a class="build__all" href="https://github.com/Allenlebron" target="_blank" rel="noopener" data-reveal>查看全部 GitHub 项目 <span>→</span></a>
   </section>
 
   <!-- ═══════════ CONTACT ═══════════ -->
@@ -490,8 +435,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/particles.js?v=particle-avatar-8"></script>
-<script src="js/build.js"></script>
+<script src="js/particles.js?v=particle-avatar-9"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

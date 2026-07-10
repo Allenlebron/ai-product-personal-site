@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ── 导航高亮:当前区块 ── */
-  const navMap = { hero:null, about:"ABOUT", writing:"WRITING", shoot:"VIDEO", build:"BUILD", contact:"CONTACT" };
+  const navMap = { hero:null, about:"ABOUT", writing:"WRITING", shoot:null, build:"BUILD", contact:"CONTACT" };
   const links = [...document.querySelectorAll(".nav__links a")];
   const setActive = (label) => {
     links.forEach(a =>

@@ -38,7 +38,7 @@
 
     var reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var EXT = 0.62; // canvas 向左扩展（让溶解粒子能铺到中间）
+    var EXT = 0.42; // 保留向左聚合，但避免粒子盖过主文案
 
     var canvas = document.createElement("canvas");
     canvas.className = "portrait__particles";
@@ -47,13 +47,12 @@
     var ctx = canvas.getContext("2d");
 
     fig.classList.remove("is-base-visible");
-    img.style.opacity = "0";
 
     var boxW = 0, boxH = 0, extPx = 0, W = 0, H = 0;
     var particles = [];
-    var TARGET = window.innerWidth < 760 ? 11000 : 30000;
-    var t0 = 0, settleStart = 1600;
-    var baseRevealStart = settleStart + 360;
+    var TARGET = window.innerWidth < 760 ? 8000 : 18000;
+    var t0 = 0, settleStart = 900;
+    var baseRevealStart = 220;
     var baseVisible = false;
     var mouse = { x: -9999, y: -9999, on: false };
 
@@ -91,8 +90,8 @@
             life: Math.random(),
             phase: Math.random() * 6.28,
             size: 0.72 + Math.random() * 0.9,
-            delay: nx * 640 + Math.random() * 240,
-            dur: 760 + Math.random() * 460,
+            delay: nx * 300 + Math.random() * 120,
+            dur: 420 + Math.random() * 280,
             x: 0, y: 0, tx: 0, ty: 0, sx: 0, sy: 0,
           });
         }
@@ -173,7 +172,7 @@
         var drawSize = p.size * (1 + hoverBoost * 0.75);
         ctx.globalAlpha = a * 0.09;
         ctx.fillRect(px - 0.15, py - 0.15, drawSize + 0.3, drawSize + 0.3);
-        ctx.globalAlpha = a;
+        ctx.globalAlpha = a * 0.72;
         ctx.fillRect(px, py, drawSize, drawSize);
       }
       ctx.globalAlpha = 1;
