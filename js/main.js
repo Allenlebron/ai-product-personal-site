@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ── 导航高亮:当前区块 ── */
-  const navMap = { hero:null, about:"ABOUT", writing:"WRITING", shoot:null, build:"BUILD", contact:"CONTACT" };
+  const navMap = { hero:null, about:"ABOUT", writing:"WRITING", intel:"INTEL", shoot:null, build:"BUILD", contact:"CONTACT" };
   const links = [...document.querySelectorAll(".nav__links a")];
   const setActive = (label) => {
     links.forEach(a =>
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) setActive(navMap[e.target.id]); });
     }, { rootMargin: "-45% 0px -45% 0px" });
-    ["hero","about","writing","shoot","build","contact"].forEach(id => {
+    ["hero","about","writing","intel","shoot","build","contact"].forEach(id => {
       const el = document.getElementById(id); if (el) io.observe(el);
     });
   }

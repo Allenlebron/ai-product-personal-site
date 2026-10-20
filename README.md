@@ -17,8 +17,9 @@ http://127.0.0.1:5173
 ## 内容入口
 
 - `index.html`：页面结构、文案、链接
+- `intel.html`：破局情报站首期导读，原文链接指向破局官方
 - `css/tokens.css`：颜色、字体、间距变量
-- `css/base.css`、`css/sections.css`、`css/work-split.css`：页面样式
+- `css/base.css`、`css/sections.css`、`css/work-split.css`、`css/intel.css`：页面样式
 - `js/main.js`：滚动动效、导航高亮、链接常量
 - `js/build.js`：Build 区块终端动画
 - `assets/`：头像、文章封面、项目封面和视频背景
