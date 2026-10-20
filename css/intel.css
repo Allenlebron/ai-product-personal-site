@@ -66,6 +66,8 @@
 }
 .intel-teaser__link span{font-size:22px;line-height:1;}
 .intel-teaser__link:hover{color:var(--accent-text);border-color:var(--accent);}
+.intel-teaser__access{margin-top:14px;font-size:12px;color:var(--accent-text);}
+.intel-teaser__access:hover{text-decoration:underline;text-underline-offset:4px;}
 
 /* ═══════════ 情报站独立页 ═══════════ */
 .intel-page__main{
@@ -260,6 +262,21 @@
 }
 .intel-entry__link span{font-size:17px;line-height:1;}
 .intel-entry__link:hover{color:var(--accent-text);border-color:var(--accent);}
+.intel-page__invite{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:92px;
+  padding:48px 52px;
+  border:1px solid var(--ink);
+  background:#EEE7DB;
+}
+.intel-page__invite span{font-size:10px;font-weight:600;letter-spacing:.17em;color:var(--accent-text);}
+.intel-page__invite h2{margin:18px 0;font-family:var(--serif-cjk);font-size:clamp(30px,3.5vw,48px);line-height:1.35;letter-spacing:-.04em;}
+.intel-page__invite p{max-width:34em;font-family:var(--sans-cjk);font-size:14px;font-weight:300;line-height:1.85;color:var(--ink-soft);}
+.intel-page__invite a{flex:none;display:inline-flex;gap:28px;align-items:center;padding:12px 0;border-bottom:1px solid var(--ink);font-size:13px;}
+.intel-page__invite a:hover{color:var(--accent-text);border-color:var(--accent);}
 .intel-page__note{
   display:grid;
   grid-template-columns:160px 1fr;
@@ -339,6 +356,8 @@
   .intel-entry__fit b:not(:first-child){margin-left:0;}
   .intel-entry__link{grid-column:2;justify-self:start;margin-top:3px;}
   .intel-page__note{grid-template-columns:1fr;gap:12px;margin:66px 0 72px;padding:28px;}
+  .intel-page__invite{flex-direction:column;align-items:start;gap:24px;margin-top:68px;padding:30px;}
+  .intel-page__invite h2{font-size:32px;}
   .intel-page__note p{font-size:13px;}
   .intel-page__footer{padding:26px var(--pad-x);}
   .intel-page__footer > span{display:none;}
