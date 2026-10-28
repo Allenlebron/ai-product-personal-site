@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL("../", import.meta.url));
-const pages = ["index.html", "intel.html", "trial.html", "404.html"];
+const pages = ["index.html", "intel.html", "story.html", "trial.html", "404.html"];
 const extensions = {
   css: new Set([".css"]),
   js: new Set([".js"]),

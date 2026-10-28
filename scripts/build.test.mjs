@@ -8,7 +8,7 @@ import { buildSite } from "./build.mjs";
 async function fixture(t) {
   const root = await mkdtemp(path.join(os.tmpdir(), "website-security-"));
   t.after(() => rm(root, { recursive: true, force: true }));
-  for (const page of ["index.html", "intel.html", "trial.html", "404.html"]) {
+  for (const page of ["index.html", "intel.html", "story.html", "trial.html", "404.html"]) {
     await writeFile(path.join(root, page), "<!doctype html><title>Public</title>");
   }
   for (const dir of ["css", "js", "assets"]) await mkdir(path.join(root, dir));
@@ -23,8 +23,8 @@ test("only public files are emitted; stale output and nested private files are r
     await writeFile(path.join(root, file), "private");
   }
   await writeFile(path.join(root, "assets/public.png"), "public image");
-  assert.equal(await buildSite(root), 6);
-  assert.deepEqual((await readdir(path.join(root, "dist"))).sort(), ["404.html", "assets", "index.html", "intel.html", "js", "trial.html"]);
+  assert.equal(await buildSite(root), 7);
+  assert.deepEqual((await readdir(path.join(root, "dist"))).sort(), ["404.html", "assets", "index.html", "intel.html", "js", "story.html", "trial.html"]);
   assert.deepEqual(await readdir(path.join(root, "dist/assets")), ["public.png"]);
   assert.deepEqual(await readdir(path.join(root, "dist/js")), ["main.js"]);
   assert.equal(await readFile(path.join(root, "dist/js/main.js"), "utf8"), "console.log('public');");
@@ -55,7 +55,7 @@ test("public publishable and anon keys remain allowed", async (t) => {
   const root = await fixture(t);
   const anonJwt = `eyJhbGciOiJIUzI1NiJ9.${Buffer.from('{"role":"anon"}').toString("base64url")}.signature`;
   await writeFile(path.join(root, "js/main.js"), `const keys = ['pk_live_public', 'sb_publishable_public', '${anonJwt}'];`);
-  assert.equal(await buildSite(root), 5);
+  assert.equal(await buildSite(root), 6);
 });
 
 test("rejects both external and embedded source maps", async (t) => {
