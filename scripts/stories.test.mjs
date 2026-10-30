@@ -11,7 +11,11 @@ const approved = {
   "55521585518514824": "2026-10-29T00:26:42+08:00",
   "14425484284824512": "2026-10-28T20:28:55+08:00",
   "22258212551124441": "2026-10-28T11:40:32+08:00",
-  "82258212511484252": "2026-10-28T20:36:01+08:00"
+  "82258212511484252": "2026-10-28T20:36:01+08:00",
+  "82258212422158442": "2026-10-29T15:09:46+08:00",
+  "45548515255521448": "2026-10-29T14:53:14+08:00",
+  "55521421128121844": "2026-10-29T22:10:35+08:00",
+  "55521421128545144": "2026-10-29T22:21:57+08:00"
 };
 
 test("approved stories retain distinct official sources, publication times and complete guides", () => {
@@ -29,20 +33,21 @@ test("approved stories retain distinct official sources, publication times and c
   }
 });
 
-test("issue 004 links to the four new stories and preserves the previous issue", async () => {
+test("issue 005 links to the four new stories and preserves previous issues", async () => {
   const intel = await readFile(new URL("../intel.html", import.meta.url), "utf8");
   const latest = intel.match(/<section[^>]+aria-labelledby="latest-title">([\s\S]*?)<\/section>/)[1];
   const links = (html) => [...html.matchAll(/href="story\.html\?id=(\d+)"/g)].map((match) => match[1]);
-  assert.deepEqual(links(latest), ["55521585518514824", "14425484284824512", "22258212551124441", "82258212511484252"]);
+  assert.deepEqual(links(latest), ["82258212422158442", "45548515255521448", "55521421128121844", "55521421128545144"]);
   assert.deepEqual(links(intel).sort(), Object.keys(approved).sort());
-  assert.match(intel, /2026\.10\.29 · 第四期/);
+  assert.match(intel, /2026\.10\.30 · 第五期/);
+  assert.match(intel, /ARCHIVE \/ 004/);
   assert.match(intel, /ARCHIVE \/ 003/);
   const ids = [...intel.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(ids).size, ids.length, "HTML IDs must remain unique");
   for (const id of links(latest)) {
     assert.ok(latest.includes(stories[id].title));
     assert.ok(latest.includes(stories[id].published));
-    assert.match(stories[id].boundary, /待核实/);
+    assert.match(stories[id].boundary, /待核实|尚未验证|未实测/);
   }
   const reader = await readFile(new URL("../story.html", import.meta.url), "utf8");
   assert.match(reader, /INTEL \/ 本站原创解读/);
